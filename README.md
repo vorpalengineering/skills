@@ -32,13 +32,10 @@ update skills to latest version
 |---|---|
 | [vulnerability-lookup](vulnerability-lookup/) | Surface known security patterns, vulnerabilities, exploits, and mitigations from the Vorpal knowledge graph |
 
-## Tools
+## Conventions
 
-Reference docs for tools that skills in this repo use.
-
-| Tool | Description |
-|---|---|
-| [vorpal-cli](tools/vorpal-cli.md) | Command-line client for the Vorpal Engineering knowledge graph |
+- Each skill is a top-level folder containing a `SKILL.md` (Claude Code skill manifest) and a `README.md` (human-readable description).
+- Tool references and other supporting docs live inside each skill's `references/` folder, curated for that skill's specific needs. Don't add top-level folders that aren't skills — Claude Code interprets every top-level folder as a skill candidate.
 
 ## Contact
 
