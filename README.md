@@ -1,42 +1,43 @@
-# Vorpal Engineering Skills
+# Vorpal Engineering Skills Marketplace
 
 > Blockchain Intelligence & Security Skills — built by [Vorpal Engineering](https://vorpalengineering.com).
 
-## Install & Use
+A Claude Code plugin marketplace for Vorpal Engineering's Blockchain Intelligence & Security skills.
 
-Install:
+## Install
 
-```
-Install https://github.com/vorpalengineering/skills/
-```
-
-Use in any conversation:
+In any Claude Code session:
 
 ```
-Look up what we know about reentrancy
+/plugin marketplace add vorpalengineering/skills
+/plugin install vulnerability-lookup@vorpalengineering
 ```
 
-```
-Find security patterns related to oracle price manipulation
-```
-
-Update to the latest version:
+That's it. Skills auto-trigger from context, or invoke explicitly:
 
 ```
-update skills to latest version
+/vulnerability-lookup
 ```
 
-## Skills
+## Update
 
-| Skill | Description |
+```
+/plugin update vulnerability-lookup@vorpalengineering
+```
+
+## Plugins
+
+| Plugin | Description |
 |---|---|
-| [vulnerability-lookup](vulnerability-lookup/) | Surface known security patterns, vulnerabilities, exploits, and mitigations from the Vorpal knowledge graph |
+| [vulnerability-lookup](plugins/vulnerability-lookup/skills/vulnerability-lookup/) | Surface known security patterns, vulnerabilities, exploits, and mitigations from the Vorpal knowledge graph |
 
-## Conventions
+## Repo Conventions
 
-- Each skill is a top-level folder containing a `SKILL.md` (Claude Code skill manifest) and a `README.md` (human-readable description).
-- Tool references and other supporting docs live inside each skill's `references/` folder, curated for that skill's specific needs. Don't add top-level folders that aren't skills — Claude Code interprets every top-level folder as a skill candidate.
+- Each skill ships as its own plugin under `plugins/<plugin-name>/`.
+- Plugins follow the canonical structure: `.claude-plugin/plugin.json` at the plugin root, plus `skills/<skill-name>/SKILL.md` for the skill itself.
+- Tool references and supporting docs live inside each skill's `references/` folder, curated for that skill's specific needs.
+- The marketplace catalog lives at `.claude-plugin/marketplace.json` at the repo root.
 
 ## Contact
 
-Questions or feedback? Reach out at [vorpalengineering.com](https://vorpalengineering.com).
+Questions or feedback? Reach out to `support@vorpalengineering.com`

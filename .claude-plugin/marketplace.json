@@ -1,0 +1,23 @@
+{
+  "name": "vorpalengineering",
+  "owner": {
+    "name": "Vorpal Engineering",
+    "email": "support@vorpalengineering.com"
+  },
+  "metadata": {
+    "version": "0.1.0",
+    "description": "Blockchain Intelligence & Security Skills from Vorpal Engineering"
+  },
+  "plugins": [
+    {
+      "name": "vulnerability-lookup",
+      "version": "0.1.0",
+      "description": "Surface known vulnerabilities, exploits, and mitigations from the Vorpal knowledge graph",
+      "author": {
+        "name": "Vorpal Engineering",
+        "url": "https://github.com/vorpalengineering"
+      },
+      "source": "./plugins/vulnerability-lookup"
+    }
+  ]
+}
